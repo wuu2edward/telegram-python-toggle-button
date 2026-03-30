@@ -1,0 +1,26 @@
+/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/utils/request.py:54: UserWarning: python-telegram-bot wasn't properly installed. Please refer to README.rst on how to properly install.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/utils/request.py", line 36, in <module>
+    import telegram.vendor.ptb_urllib3.urllib3 as urllib3
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/vendor/ptb_urllib3/urllib3/__init__.py", line 7, in <module>
+    from .connectionpool import (
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/vendor/ptb_urllib3/urllib3/connectionpool.py", line 11, in <module>
+    from .exceptions import (
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/vendor/ptb_urllib3/urllib3/exceptions.py", line 2, in <module>
+    from .packages.six.moves.http_client import (
+ModuleNotFoundError: No module named 'telegram.vendor.ptb_urllib3.urllib3.packages.six.moves'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/bot.py", line 4, in <module>
+    from telegram import Update, ParseMode
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/__init__.py", line 174, in <module>
+    from .bot import Bot
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/bot.py", line 103, in <module>
+    from telegram.utils.request import Request
+  File "/root/.openclaw/workspace/virgildiana_telegram_client/venv/lib/python3.12/site-packages/telegram/utils/request.py", line 44, in <module>
+    import urllib3.contrib.appengine as appengine  # type: ignore[no-redef]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'urllib3.contrib.appengine'

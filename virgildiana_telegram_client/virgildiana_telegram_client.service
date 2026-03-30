@@ -1,0 +1,13 @@
+[Unit]
+Description=V.I.R.G.I.L Telegram Client Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/virgildiana_telegram_client
+ExecStart=/root/virgildiana_telegram_client/venv/bin/python /root/virgildiana_telegram_client/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
