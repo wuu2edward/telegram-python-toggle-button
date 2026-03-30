@@ -1,0 +1,13 @@
+[Unit]
+Description=VIRGIL DIANA Telegram Bot
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/virgildiana_bot
+ExecStart=/root/virgildiana_bot/venv/bin/python /root/virgildiana_bot/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

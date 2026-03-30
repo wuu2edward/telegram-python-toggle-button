@@ -4,14 +4,25 @@ class ToggleButtonApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Toggle Button")
-        self.is_on = False
 
-        self.button = tk.Button(root, text="OFF", width=10, height=3, bg="red", fg="white", command=self.toggle)
+        self.var = tk.IntVar(value=0)  # 0=OFF, 1=ON
+
+        self.button = tk.Checkbutton(
+            root,
+            text="OFF",
+            variable=self.var,
+            width=10,
+            height=3,
+            fg="white",
+            bg="red",
+            selectcolor="green",
+            command=self.toggle
+        )
         self.button.pack(pady=20)
+        self.toggle()  # Initialize colors/states
 
     def toggle(self):
-        self.is_on = not self.is_on
-        if self.is_on:
+        if self.var.get():
             self.button.config(text="ON", bg="green")
         else:
             self.button.config(text="OFF", bg="red")
